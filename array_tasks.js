@@ -51,6 +51,17 @@ var arrayTasks = {
 
 	sumOfAllEvenNumbersSquared: function (arr) {
 		var evenNumbers = []
+		for(num of arr){
+			if(num % 2 == 0){
+				evenNumbers.push(num)
+			}
+		}
+		var result = evenNumbers.map( x => x * x)
+		var sum = result.reduce(function(a, b){
+			return a + b;
+		}, 0);
+		return sum;
+
 	}
 
 }
